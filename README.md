@@ -23,7 +23,7 @@ The project relies on several Rust crates, as specified in `Cargo.toml`. Some of
 
 ## How to Run
 
-1. **Compile the binaries**: Run `./build.sh` to compile the project.
+1. **Compile the binaries**: Run `chmod +x build.sh && ./build.sh` to compile the project.
 2. **Start the Web Server**: Execute the compiled web server binary to start the Actix web server.  
 
         cd frontend && ./webserver
