@@ -1,0 +1,79 @@
+/* Base styles */
+body {
+  background-color: #333;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.form-group {
+  margin-bottom: 1%;
+}
+
+label {
+  display: inline-block;
+  width: 30%;
+  font-weight: bold;
+  color: #ddd;
+}
+
+input[type="number"],
+input[type="range"],
+select {
+  width: 68%;
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #444;
+}
+
+thead {
+  background-color: #555;
+}
+
+thead th {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 2px solid #666;
+  color: #ddd;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #666;
+}
+
+tbody td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #555;
+}
+
+.operation-button.active {
+  background-color: #777;
+  color: #fff;
+}
+
+input[type="text"][readonly] {
+  border: none;
+  font-size: 1.2em;
+  background: transparent;
+  color: #ddd;
+}

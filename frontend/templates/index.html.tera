@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CoinPriceWidget</title>
+  <script src="https://unpkg.com/htmx.org@1.6.1"></script>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <script src="/static/js/script.js"></script>
+</head>
+<body hx-trigger="htmx:configRequest, htmx:afterOnLoad, htmx:afterSwap" hx-swap-oob="true" hx-debug="true">
+    <form hx-post="/run-algo-operation" hx-swap="innerHTML" hx-target="#results">
+    <div class="form-group">
+        <label for="high_percent">High Percent:</label>
+        <input type="range" id="high_percent" name="high_percent" min="0" max="100">
+        <input type="text" id="high_percent_value" readonly>
+      </div>
+      <div class="form-group">
+        <label for="low_percent">Low Percent:</label>
+        <input type="range" id="low_percent" name="low_percent" min="0" max="100">
+        <input type="text" id="low_percent_value" readonly>
+      </div>
+      <div class="form-group center-text">
+        <label for="start_price">Start Price:</label>
+        <input type="number" id="start_price" name="start_price">
+      </div>
+      <div class="form-group center-text">
+          <label for="units" id="units_label">Units:</label>
+          <input type="number" id="units" name="units">
+      </div>
+      <div class="form-group button-group">
+        <label>Operation Type:</label>
+        <button type="button" class="operation-button" id="buy_button">Buy</button>
+        <button type="button" class="operation-button" id="sell_button">Sell</button>
+        <input type="hidden" id="operation_type" name="operation_type">
+      </div>
+      <button type="submit">Run Algorithm Operation</button>
+  </form>
+  <div id="results"></div>
+</body>
+</html>
